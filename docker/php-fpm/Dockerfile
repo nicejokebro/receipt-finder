@@ -11,7 +11,6 @@ RUN apt-get update --fix-missing && \
     libmemcached-dev \
     libkrb5-dev && rm -r /var/lib/apt/lists/* \
     && pecl install xdebug-3.2.0 \
-    && docker-php-ext-enable xdebug \
     && docker-php-ext-install mysqli \
     && docker-php-ext-install pdo_mysql \
     && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
