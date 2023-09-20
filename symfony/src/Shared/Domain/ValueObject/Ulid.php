@@ -27,7 +27,7 @@ readonly class Ulid
 		return new self($value);
 	}
 
-	public static function isValid(string $value): bool
+	private static function isValid(string $value): bool
 	{
 		return SymfonyUlid::isValid($value);
 	}

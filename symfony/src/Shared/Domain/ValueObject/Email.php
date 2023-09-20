@@ -6,16 +6,16 @@ namespace App\Shared\Domain\ValueObject;
 
 use DomainException;
 
-readonly class Link
+readonly class Email
 {
 	private function __construct(
 		public string $value
 	) {}
 
-	public static function create(string $value): Link
+	public static function create(string $value): Email
 	{
 		if (!static::isValid($value)) {
-			throw new DomainException('Link->value is not a URL');
+			throw new DomainException('Mail->value is not Email');
 		}
 
 		return new self($value);
@@ -23,6 +23,8 @@ readonly class Link
 
 	public static function isValid(string $value): bool
 	{
-		return false !== filter_var($value, FILTER_VALIDATE_URL);
+		return false !== filter_var($value, FILTER_VALIDATE_EMAIL);
 	}
+
+
 }
