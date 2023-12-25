@@ -1,5 +1,5 @@
 # receipt-finder
-this app written to find receipts
+this app was written to find receipts
 
 1) enable imap for your email
    2) yandex https://yandex.ru/support/mail/mail-clients/others.html
